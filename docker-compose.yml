@@ -1,0 +1,10 @@
+version: '3'
+services:
+  tests:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: playwright_python
+    volumes:
+      - ./src:/code
+    command: "python3 /code/test_example.py"
