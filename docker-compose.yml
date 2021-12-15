@@ -7,4 +7,5 @@ services:
     image: playwright_python
     volumes:
       - ./src:/code
-    command: "python3 /code/test_example.py"
+    working_dir: /code
+    command: "pytest --html=report.html --browser chromium --browser firefox"

@@ -243,15 +243,12 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
 }
 </script>
     <h1>report.html</h1>
-    <p>Report generated on 15-Dec-2021 at 09:13:50 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.1.1</p>
+    <p>Report generated on 15-Dec-2021 at 09:26:04 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.1.1</p>
     <h2>Environment</h2>
     <table id="environment">
       <tr>
         <td>Base URL</td>
         <td></td></tr>
-      <tr>
-        <td>JAVA_HOME</td>
-        <td>/home/gitpod/.sdkman/candidates/java/current</td></tr>
       <tr>
         <td>Packages</td>
         <td>{"pluggy": "1.0.0", "py": "1.11.0", "pytest": "6.2.5"}</td></tr>
@@ -260,12 +257,12 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <td>Linux-5.13.0-1007-gcp-x86_64-with-glibc2.29</td></tr>
       <tr>
         <td>Plugins</td>
-        <td>{"base-url": "1.4.2", "html": "3.1.1", "metadata": "1.11.0", "playwright": "0.2.2", "pylama": "7.7.1"}</td></tr>
+        <td>{"base-url": "1.4.2", "html": "3.1.1", "metadata": "1.11.0", "playwright": "0.2.2"}</td></tr>
       <tr>
         <td>Python</td>
-        <td>3.8.12</td></tr></table>
+        <td>3.8.10</td></tr></table>
     <h2>Summary</h2>
-    <p>4 tests ran in 36.38 seconds. </p>
+    <p>4 tests ran in 35.23 seconds. </p>
     <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">1 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">3 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
     <h2>Results</h2>
     <table id="results-table">
@@ -281,37 +278,37 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <tr>
           <td class="col-result">Failed</td>
           <td class="col-name">tests/test_example.py::test_dev_is_working[chromium]</td>
-          <td class="col-duration">0.96</td>
+          <td class="col-duration">0.90</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
             <div><div><img src=".playwright-screenshots/tests-test-example-py-test-dev-is-working-chromium.png" style="width:600px;height:228px;" onclick="window.open(this.src)" align="right"/></div></div>
-            <div class="log">page = &lt;Page url=&#x27;https://dev.to/&#x27;&gt;<br/><br/>    def test_dev_is_working(page):<br/>        page.goto(&quot;https://dev.to&quot;)<br/>&gt;       assert 1==0<br/><span class="error">E       assert 1 == 0</span><br/><br/>tests/test_example.py:8: AssertionError<br/></div></td></tr></tbody>
+            <div class="log">page = &lt;Page url=&#x27;https://dev.to/&#x27;&gt;<br/><br/>&gt;   ???<br/><span class="error">E   assert 1 == 0</span><br/><br/>/workspace/playwright_python/src/tests/test_example.py:8: AssertionError<br/></div></td></tr></tbody>
       <tbody class="failed results-table-row">
         <tr>
           <td class="col-result">Failed</td>
           <td class="col-name">tests/test_example.py::test_example_is_working[firefox]</td>
-          <td class="col-duration">32.28</td>
+          <td class="col-duration">31.74</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
             <div><div><img src=".playwright-screenshots/tests-test-example-py-test-example-is-working-firefox.png" style="width:600px;height:228px;" onclick="window.open(this.src)" align="right"/></div></div>
-            <div class="log">page = &lt;Page url=&#x27;https://example.com/&#x27;&gt;<br/><br/>    def test_example_is_working(page):<br/>        page.goto(&quot;https://example.com&quot;)<br/>        assert page.inner_text(&#x27;h1&#x27;) == &#x27;Example Domain&#x27;<br/>&gt;       page.click(&quot;text=More information&quot;)<br/><br/>tests/test_example.py:4: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/>/home/gitpod/.pyenv/versions/3.8.12/lib/python3.8/site-packages/playwright/sync_api/_generated.py:7965: in click<br/>    self._sync(<br/>/home/gitpod/.pyenv/versions/3.8.12/lib/python3.8/site-packages/playwright/_impl/_sync_base.py:111: in _sync<br/>    return task.result()<br/>/home/gitpod/.pyenv/versions/3.8.12/lib/python3.8/site-packages/playwright/_impl/_page.py:626: in click<br/>    return await self._main_frame.click(**locals_to_params(locals()))<br/>/home/gitpod/.pyenv/versions/3.8.12/lib/python3.8/site-packages/playwright/_impl/_frame.py:457: in click<br/>    await self._channel.send(&quot;click&quot;, locals_to_params(locals()))<br/>/home/gitpod/.pyenv/versions/3.8.12/lib/python3.8/site-packages/playwright/_impl/_connection.py:39: in send<br/>    return await self.inner_send(method, params, False)<br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/><br/>self = &lt;playwright._impl._connection.Channel object at 0x7fb649e871c0&gt;, method = &#x27;click&#x27;, params = {&#x27;selector&#x27;: &#x27;text=More information&#x27;}<br/>return_as_dict = False<br/><br/>    async def inner_send(<br/>        self, method: str, params: Optional[Dict], return_as_dict: bool<br/>    ) -&gt; Any:<br/>        if params is None:<br/>            params = {}<br/>        callback = self._connection._send_message_to_server(self._guid, method, params)<br/>        if self._connection._error:<br/>            error = self._connection._error<br/>            self._connection._error = None<br/>            raise error<br/>        done, _ = await asyncio.wait(<br/>            {<br/>                self._connection._transport.on_error_future,<br/>                callback.future,<br/>            },<br/>            return_when=asyncio.FIRST_COMPLETED,<br/>        )<br/>        if not callback.future.done():<br/>            callback.future.cancel()<br/>&gt;       result = next(iter(done)).result()<br/><span class="error">E       playwright._impl._api_types.TimeoutError: Timeout 30000ms exceeded.</span><br/><span class="error">E       =========================== logs ===========================</span><br/><span class="error">E       waiting for selector &quot;text=More information&quot;</span><br/><span class="error">E         selector resolved to visible &lt;a href=&quot;https://www.iana.org/domains/example&quot;&gt;More information...&lt;/a&gt;</span><br/><span class="error">E       attempting click action</span><br/><span class="error">E         waiting for element to be visible, enabled and stable</span><br/><span class="error">E         element is visible, enabled and stable</span><br/><span class="error">E         scrolling into view if needed</span><br/><span class="error">E         done scrolling</span><br/><span class="error">E         checking that element receives pointer events at (416.15,275.36)</span><br/><span class="error">E         element does receive pointer events</span><br/><span class="error">E         performing click action</span><br/><span class="error">E         click action done</span><br/><span class="error">E         waiting for scheduled navigations to finish</span><br/><span class="error">E       ============================================================</span><br/><br/>/home/gitpod/.pyenv/versions/3.8.12/lib/python3.8/site-packages/playwright/_impl/_connection.py:63: TimeoutError<br/></div></td></tr></tbody>
+            <div class="log">page = &lt;Page url=&#x27;https://example.com/&#x27;&gt;<br/><br/>&gt;   ???<br/><br/>/workspace/playwright_python/src/tests/test_example.py:4: <br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/>/usr/local/lib/python3.8/dist-packages/playwright/sync_api/_generated.py:7965: in click<br/>    self._sync(<br/>/usr/local/lib/python3.8/dist-packages/playwright/_impl/_sync_base.py:111: in _sync<br/>    return task.result()<br/>/usr/local/lib/python3.8/dist-packages/playwright/_impl/_page.py:626: in click<br/>    return await self._main_frame.click(**locals_to_params(locals()))<br/>/usr/local/lib/python3.8/dist-packages/playwright/_impl/_frame.py:457: in click<br/>    await self._channel.send(&quot;click&quot;, locals_to_params(locals()))<br/>/usr/local/lib/python3.8/dist-packages/playwright/_impl/_connection.py:39: in send<br/>    return await self.inner_send(method, params, False)<br/>_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ <br/><br/>self = &lt;playwright._impl._connection.Channel object at 0x7f2737b8fe50&gt;<br/>method = &#x27;click&#x27;, params = {&#x27;selector&#x27;: &#x27;text=More information&#x27;}<br/>return_as_dict = False<br/><br/>    async def inner_send(<br/>        self, method: str, params: Optional[Dict], return_as_dict: bool<br/>    ) -&gt; Any:<br/>        if params is None:<br/>            params = {}<br/>        callback = self._connection._send_message_to_server(self._guid, method, params)<br/>        if self._connection._error:<br/>            error = self._connection._error<br/>            self._connection._error = None<br/>            raise error<br/>        done, _ = await asyncio.wait(<br/>            {<br/>                self._connection._transport.on_error_future,<br/>                callback.future,<br/>            },<br/>            return_when=asyncio.FIRST_COMPLETED,<br/>        )<br/>        if not callback.future.done():<br/>            callback.future.cancel()<br/>&gt;       result = next(iter(done)).result()<br/><span class="error">E       playwright._impl._api_types.TimeoutError: Timeout 30000ms exceeded.</span><br/><span class="error">E       =========================== logs ===========================</span><br/><span class="error">E       waiting for selector &quot;text=More information&quot;</span><br/><span class="error">E         selector resolved to visible &lt;a href=&quot;https://www.iana.org/domains/example&quot;&gt;More information...&lt;/a&gt;</span><br/><span class="error">E       attempting click action</span><br/><span class="error">E         waiting for element to be visible, enabled and stable</span><br/><span class="error">E         element is visible, enabled and stable</span><br/><span class="error">E         scrolling into view if needed</span><br/><span class="error">E         done scrolling</span><br/><span class="error">E         checking that element receives pointer events at (408.48,264.36)</span><br/><span class="error">E         element does receive pointer events</span><br/><span class="error">E         performing click action</span><br/><span class="error">E         click action done</span><br/><span class="error">E         waiting for scheduled navigations to finish</span><br/><span class="error">E       ============================================================</span><br/><br/>/usr/local/lib/python3.8/dist-packages/playwright/_impl/_connection.py:63: TimeoutError<br/></div></td></tr></tbody>
       <tbody class="failed results-table-row">
         <tr>
           <td class="col-result">Failed</td>
           <td class="col-name">tests/test_example.py::test_dev_is_working[firefox]</td>
-          <td class="col-duration">1.18</td>
+          <td class="col-duration">1.21</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
             <div><div><img src=".playwright-screenshots/tests-test-example-py-test-dev-is-working-firefox.png" style="width:600px;height:228px;" onclick="window.open(this.src)" align="right"/></div></div>
-            <div class="log">page = &lt;Page url=&#x27;https://dev.to/&#x27;&gt;<br/><br/>    def test_dev_is_working(page):<br/>        page.goto(&quot;https://dev.to&quot;)<br/>&gt;       assert 1==0<br/><span class="error">E       assert 1 == 0</span><br/><br/>tests/test_example.py:8: AssertionError<br/></div></td></tr></tbody>
+            <div class="log">page = &lt;Page url=&#x27;https://dev.to/&#x27;&gt;<br/><br/>&gt;   ???<br/><span class="error">E   assert 1 == 0</span><br/><br/>/workspace/playwright_python/src/tests/test_example.py:8: AssertionError<br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_example.py::test_example_is_working[chromium]</td>
-          <td class="col-duration">1.36</td>
+          <td class="col-duration">0.81</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
