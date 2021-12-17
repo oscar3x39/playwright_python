@@ -2,6 +2,8 @@
 from slugify import slugify
 from pathlib import Path
 import pytest
+from playwright.sync_api import BrowserType
+from typing import Dict
 
 @pytest.mark.hookwrapper(scope='session', autouse=True)
 def pytest_runtest_makereport(item, call) -> None:
@@ -21,3 +23,17 @@ def pytest_runtest_makereport(item, call) -> None:
                        'onclick="window.open(this.src)" align="right"/></div>' % filename
                 extra.append(pytest_html.extras.html(html))
     report.extra = extra
+
+@pytest.fixture(scope="session")
+def context(
+    browser_type: BrowserType,
+    browser_type_launch_args: Dict,
+    browser_context_args: Dict
+):
+    context = browser_type.launch_persisten_context("./tests", **{
+        **browser_type_launch_args,
+        **browser_context_args,
+        "locale": "zh-TW"
+    })
+    yield context
+    context.close()
