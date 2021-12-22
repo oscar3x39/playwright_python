@@ -33,7 +33,8 @@ def context(
     context = browser_type.launch_persisten_context("./tests", **{
         **browser_type_launch_args,
         **browser_context_args,
-        "locale": "zh-TW"
+        "locale": "zh-TW",
+        "viewport": {"width": 375, "height": 812}
     })
     yield context
     context.close()
